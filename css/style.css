@@ -741,3 +741,34 @@ ul, ol { list-style: none; }
   .contact-block { padding: 32px 24px; }
   .news-item { flex-direction: column; gap: 8px; }
 }
+
+/* ---------- 页脚来访人数统计 ---------- */
+.visit-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 12.5px;
+  letter-spacing: .2px;
+  color: rgba(255, 255, 255, .62);
+}
+.visit-counter svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  fill: currentColor;
+  opacity: .75;
+}
+.visit-counter .visit-num {
+  color: #fff;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.visit-counter .visit-sep { margin: 0 6px; opacity: .45; }
+.visit-counter.is-hidden { display: none; }
+@media (max-width: 600px) {
+  .visit-counter { font-size: 12px; gap: 2px; }
+  .visit-counter .visit-sep { margin: 0 3px; }
+}
